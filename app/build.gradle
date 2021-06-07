@@ -5,6 +5,10 @@ plugins {
     id 'kotlin-parcelize'
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -17,6 +21,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // DataBinding
+    buildFeatures {
+        dataBinding true
     }
 
     buildTypes {
